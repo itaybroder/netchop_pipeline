@@ -11,7 +11,11 @@ def feed_to_NetMHCPan(input_file_path, output_file_path, pep_length):
     HLA_str = 'HLA-A01:01,HLA-A02:01,HLA-A03:01,HLA-A24:02,HLA-A26:01,HLA-B07:02,HLA-B08:01,HLA-B27:05,HLA-B39:01,' \
               'HLA-B40:01,HLA-B58:01,HLA-B15:01'
     for length in pep_length:
-        command = path_to_tool + "/netMHCpan -p " + input_file_path + " -l " + length + " -a " + HLA_str + " -s " + " >" + output_file_path
+        command = path_to_tool + "/netMHCpan -p " + input_file_path + " -l " + str(length) + " -a " + HLA_str + " -s " + " >" + output_file_path
     print(command)
     subprocess.check_output('%s' % command, shell=True)
 
+input_folder = "/home/itaybroder/Desktop/CovidResearch/CovSpikeMCHProject/input_files"
+output_folder = "/home/itaybroder/Desktop/CovidResearch/CovSpikeMCHProject/output_files"
+pep_length = [8, 9, 10]
+feed_to_NetMHCPan(input_folder + '/all_peps.txt', output_folder + '/out.txt', pep_length)
