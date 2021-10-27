@@ -1,5 +1,5 @@
 # /home/itaybroder/Documents/netchop-3.1/Linux_x86_64/bin/netChop /home/itaybroder/Documents/GitHub/CovidResearch/CovSpikeMCHProject/input_files/spike.fasta
-# Wed Oct 27 15:13:27 2021
+# Wed Oct 27 22:35:41 2021
 # User: itaybroder
 # PWD : /home/itaybroder/Documents/GitHub/CovidResearch
 # Host: Linux pop-os 5.13.0-7614-generic x86_64
@@ -12,7 +12,7 @@
 #	[-tdir filename]     /home/itaybroder/Documents/netchop-3.1/tmp/netChopXXXXXX Temporary directory (made with mkdtemp)
 #	[-dirty]             0                    Dirty model, keep temp files
 #	[-ostrict]           0                    Turn off strict mode
-# Tmpdir made /home/itaybroder/Documents/netchop-3.1/tmp/netChopDKHXfj
+# Tmpdir made /home/itaybroder/Documents/netchop-3.1/tmp/netChopDKaTBA
 NetChop 3.0 predictions using version C-term. Threshold 0.500000
 
 --------------------------------------
@@ -1339,24 +1339,24 @@ Number of cleavage sites 391. Number of amino acids 1273. Protein name seq1
   38   Y  S   0.642105       seq2
   39   P  .   0.112670       seq2
   40   D  .   0.039965       seq2
-  41   K  .   0.390794       seq2
-  42   V  .   0.417059       seq2
-  43   F  S   0.885239       seq2
-  44   R  S   0.728788       seq2
-  45   S  .   0.354145       seq2
-  46   S  .   0.385131       seq2
-  47   V  S   0.706510       seq2
-  48   L  S   0.966109       seq2
-  49   H  S   0.711816       seq2
-  50   S  .   0.035633       seq2
-  51   T  .   0.112813       seq2
-  52   Q  .   0.198630       seq2
-  53   D  .   0.076256       seq2
-  54   L  S   0.928684       seq2
-  55   F  .   0.132726       seq2
-  56   L  .   0.239816       seq2
-  57   P  .   0.027877       seq2
-  58   F  S   0.553019       seq2
+  41   K  .   0.321059       seq2
+  42   V  .   0.257383       seq2
+  43   F  S   0.776167       seq2
+  44   R  S   0.657898       seq2
+  45   S  .   0.300579       seq2
+  46   S  .   0.315099       seq2
+  47   V  S   0.736885       seq2
+  48   L  S   0.935148       seq2
+  49   F  S   0.964687       seq2
+  50   D  .   0.024012       seq2
+  51   T  .   0.048749       seq2
+  52   Q  .   0.073203       seq2
+  53   D  .   0.068520       seq2
+  54   L  S   0.950343       seq2
+  55   F  .   0.311803       seq2
+  56   L  .   0.282603       seq2
+  57   P  .   0.025408       seq2
+  58   F  .   0.447392       seq2
   59   F  .   0.325224       seq2
   60   S  .   0.026448       seq2
   61   N  .   0.110402       seq2
@@ -1369,24 +1369,24 @@ Number of cleavage sites 391. Number of amino acids 1273. Protein name seq1
   68   I  S   0.810649       seq2
   69   H  .   0.402359       seq2
   70   V  S   0.952098       seq2
-  71   S  .   0.031317       seq2
-  72   G  .   0.041204       seq2
-  73   T  .   0.042747       seq2
-  74   N  .   0.093344       seq2
-  75   G  .   0.045140       seq2
-  76   T  .   0.244205       seq2
-  77   K  S   0.968706       seq2
-  78   R  .   0.301441       seq2
-  79   F  S   0.880370       seq2
-  80   D  .   0.023019       seq2
-  81   N  .   0.022783       seq2
-  82   P  .   0.025764       seq2
-  83   V  S   0.656147       seq2
-  84   L  .   0.428362       seq2
-  85   P  .   0.284186       seq2
-  86   F  S   0.808232       seq2
-  87   N  .   0.029181       seq2
-  88   D  .   0.023498       seq2
+  71   S  .   0.035755       seq2
+  72   G  .   0.042436       seq2
+  73   T  .   0.038677       seq2
+  74   N  .   0.123924       seq2
+  75   G  .   0.039901       seq2
+  76   T  .   0.264059       seq2
+  77   K  S   0.913336       seq2
+  78   R  S   0.562115       seq2
+  79   D  .   0.050542       seq2
+  80   F  .   0.260262       seq2
+  81   N  .   0.022241       seq2
+  82   P  .   0.028034       seq2
+  83   V  S   0.778613       seq2
+  84   L  S   0.785882       seq2
+  85   P  .   0.121430       seq2
+  86   F  S   0.777792       seq2
+  87   N  .   0.030432       seq2
+  88   D  .   0.023009       seq2
   89   G  .   0.116972       seq2
   90   V  S   0.845836       seq2
   91   Y  S   0.970293       seq2

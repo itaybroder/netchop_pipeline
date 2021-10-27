@@ -1,16 +1,8 @@
 import subprocess
 import os
 
-def feed_to_Netchop(input_file_path, output_file_path):
-    path_to_tool = '/home/itaybroder/Documents/netchop-3.1'
-    if os.path.exists(path_to_tool) and os.path.exists(output_file_path) and os.path.exists(input_file_path):
-        print('found all paths  :) ')
-    else:
-        print('cant find a path  :( ')
-
+def feed_to_Netchop(input_file_path, output_file_path, path_to_tool):
     command = path_to_tool + "/netchop " + input_file_path + " >" + output_file_path
-    print(command)
-
     subprocess.check_output('%s' % command, shell=True)
 
 
@@ -45,11 +37,3 @@ def create_dataframe(file, df, seq):
                         lis.append(line)
                 
                 return df
-                    
-                    
-                
-            
-            
-
-    
-
