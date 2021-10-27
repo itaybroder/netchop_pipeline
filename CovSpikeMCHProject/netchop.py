@@ -36,11 +36,12 @@ def create_dataframe(file, df, seq):
                         continue
                     else:
                         line = line.split()
-                        start_pos = line[0]
-                        choped = line[2] == 'S'
+                        pos = line[0]
+                        choped = (line[2] == 'S')
                         curr_seq = line[4]
                         if(curr_seq == seq):
-                            df.loc[df['end_pos'] == start_pos, 'Chopped'] = choped
+                            a = df["end_pos"]
+                            df.loc[df['end_pos'] == pos, 'Chopped'] = choped
                         lis.append(line)
                 
                 return df

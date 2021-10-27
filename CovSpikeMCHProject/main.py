@@ -31,11 +31,11 @@ def netchop_mutation_pipeline(mutation_dict):
     a1 = split_for_all_peptides(mutent_dict['seq1'])
     cols1 = ['peptide', 'start_pos','end_pos']
     df1 =  pd.DataFrame(a1, columns=cols1)
-    df1["Choped"] = ''
+    df1["Chopped"] = ''
     a2 = split_for_all_peptides(mutent_dict['seq2'])
     cols2 = ['peptide_after_mutation', 'start_pos_after_mutation','end_pos_mutation']
     df2 =  pd.DataFrame(a2, columns=cols1)
-    df2['Choped'] = ''
+    df2['Chopped'] = ''
 
     #add choped indicator to the df
     input_folder = "/home/itaybroder/Documents/GitHub/CovidResearch/CovSpikeMCHProject/input_files/spike.fasta"
@@ -47,6 +47,6 @@ def netchop_mutation_pipeline(mutation_dict):
      
     frames = [df1, df2]
     result = pd.concat(frames)
-    result.to_csv("big_pred.csv")
+    df1.to_csv("big_pred.csv")
     
 netchop_mutation_pipeline(mutent_dict)

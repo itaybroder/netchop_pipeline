@@ -1,7 +1,7 @@
 # /home/itaybroder/Documents/netchop-3.1/Linux_x86_64/bin/netChop /home/itaybroder/Documents/GitHub/CovidResearch/CovSpikeMCHProject/input_files/spike.fasta
-# Tue Oct 26 21:50:58 2021
+# Wed Oct 27 08:33:28 2021
 # User: itaybroder
-# PWD : /home/itaybroder/Documents/GitHub/CovidResearch/CovSpikeMCHProject
+# PWD : /home/itaybroder/Documents/GitHub/CovidResearch
 # Host: Linux pop-os 5.13.0-7614-generic x86_64
 # Command line parameters set to:
 #	[-t float]           0.500000             Threshold for assigned cleavage site
@@ -12,7 +12,7 @@
 #	[-tdir filename]     /home/itaybroder/Documents/netchop-3.1/tmp/netChopXXXXXX Temporary directory (made with mkdtemp)
 #	[-dirty]             0                    Dirty model, keep temp files
 #	[-ostrict]           0                    Turn off strict mode
-# Tmpdir made /home/itaybroder/Documents/netchop-3.1/tmp/netChopdGIvHN
+# Tmpdir made /home/itaybroder/Documents/netchop-3.1/tmp/netChopPbEF7K
 NetChop 3.0 predictions using version C-term. Threshold 0.500000
 
 --------------------------------------
