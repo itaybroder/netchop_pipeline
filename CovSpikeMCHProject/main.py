@@ -44,9 +44,7 @@ def netchop_mutation_pipeline(mutation_dict):
     df1 = create_dataframe(output_folder, df1, 'seq1')
     df2 = create_dataframe(output_folder, df2, 'seq2')
         
-     
-    frames = [df1, df2]
-    result = pd.concat(frames)
-    df1.to_csv("big_pred.csv")
+    result = df1.merge(df2, how='left', left_on=['start_pos', 'end_pos'], right_on=['start_pos','end_pos'])
+    result.to_csv("big_pred.csv")
     
 netchop_mutation_pipeline(mutent_dict)

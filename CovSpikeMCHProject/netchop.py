@@ -36,7 +36,7 @@ def create_dataframe(file, df, seq):
                         continue
                     else:
                         line = line.split()
-                        pos = line[0]
+                        pos = int(line[0])
                         choped = (line[2] == 'S')
                         curr_seq = line[4]
                         if(curr_seq == seq):
