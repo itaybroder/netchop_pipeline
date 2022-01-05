@@ -44,8 +44,8 @@ def netchop_mutation_pipeline(mutation_dict):
     input_folder = INPUT_DIR +"/spike.fasta"
     output_folder = OUTPUT_DIR + "/out.txt"
     feed_to_Netchop(input_folder, output_folder, PATH_TO_NETCHOP)
-    df1 = create_dataframe(output_folder, df1, 'seq1')
-    df2 = create_dataframe(output_folder, df2, 'seq2')
+    df1 = create_dataframe(output_folder, df1, 'seq1', HOME_DIRECTORY)
+    df2 = create_dataframe(output_folder, df2, 'seq2', HOME_DIRECTORY)
         
     result = df1.merge(df2, how='left', left_on=['start_pos', 'end_pos'], right_on=['start_pos','end_pos'], suffixes=['_before_mutation', '_after_mutation'])
     return result
