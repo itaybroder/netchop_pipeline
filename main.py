@@ -7,7 +7,7 @@ from MHCpan import split_for_all_peptides
 HOME_DIRECTORY = '/home/itaybroder/Desktop/netchop_pipeline'
 INPUT_DIR = os.path.join(HOME_DIRECTORY, 'input_files')
 OUTPUT_DIR = os.path.join(HOME_DIRECTORY, 'output_files')
-PATH_TO_NETCHOP = '/home/itaybroder/Documents/netchop-3.1d.Linux/netchop-3.1'
+PATH_TO_NETCHOP = '/home/itaybroder/Documents/netchop/netchop-3.1'
 
 #choose you can choose the RNA either from here or through the .fasta file
 mutent_dict = {
