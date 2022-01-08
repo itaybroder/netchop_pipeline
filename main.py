@@ -29,8 +29,9 @@ input_file.close()
 
 def cystine(pep):
     for i in range(1, len(pep)-2):
+         print(pep)
         if(pep[i] == "C"):
-            print(pep)
+           
             return True
     return False
 
