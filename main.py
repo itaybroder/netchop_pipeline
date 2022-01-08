@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import os
 
 from netchop import create_dataframe, feed_to_Netchop
@@ -26,6 +27,11 @@ for i in mutent_dict:
 input_file.close()
 
 
+def cystine(pep):
+    for i in range(1, len(pep)-2):
+        if(pep[i] == "C"):
+            return True
+    return False
 
 def netchop_mutation_pipeline(mutation_dict):  
     #creating all peptides from RNA
@@ -47,8 +53,10 @@ def netchop_mutation_pipeline(mutation_dict):
     df1 = create_dataframe(output_file, df1, 'seq1', OUTPUT_DIR)
     df2 = create_dataframe(output_file, df2, 'seq2', OUTPUT_DIR)
     
-    
-    result = df1.merge(df2, how='left', left_on=['start_pos', 'end_pos'], right_on=['start_pos','end_pos'], suffixes=['_before_mutation', '_after_mutation'])
+    result = df1
+    df1["cysteine"] = np.where(cystine(df1["peptide"]), True, False)
+
+    # result = df1.merge(df2, how='left', left_on=['start_pos', 'end_pos'], right_on=['start_pos','end_pos'], suffixes=['_before_mutation', '_after_mutation'])
     return result
     
 result = netchop_mutation_pipeline(mutent_dict)
