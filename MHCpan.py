@@ -1,6 +1,8 @@
 import subprocess
 import os
 
+#fjsfjksljdflk
+
 #splitting RNA to all the possible peptides by certain k
 def split_by_k(str, k):
     peptides = []
