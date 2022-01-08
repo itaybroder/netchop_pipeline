@@ -1,5 +1,5 @@
 import pandas as pd
-import numpy as np
+
 import os
 
 from netchop import create_dataframe, feed_to_Netchop
