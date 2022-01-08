@@ -40,7 +40,7 @@ print(pep_list)
 textfile = open("all_peps.txt", "w")
 for element in pep_list:
     
-    textfile.write(element + "\n")
+    textfile.write(element[0] + "\n")
 textfile.close()
 
 
