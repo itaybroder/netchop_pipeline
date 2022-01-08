@@ -22,16 +22,16 @@ def feed_to_NetMHCPan(input_file_path, output_file_path, pep_length):
     if os.path.exists(path_to_tool):
         print('found all paths  :) ')
     else:
-        print("coudn't find ", " ", os.path.exists(path_to_tool))
+        print("coudn't find ", " ", path_to_tool)
 
     if os.path.exists(output_file_path):
         print('found all paths  :) ')
     else:
-        print("coudn't find ", " ", os.path.exists(output_file_path))
+        print("coudn't find ", " ", output_file_path)
     if os.path.exists(input_file_path):
          print('found all paths  :) ')
     else:
-        print("coudn't find ", " ", os.path.exists(input_file_path))
+        print("coudn't find ", " ", input_file_path)
 
 
     HLA_str = 'HLA-A01:01,HLA-A02:01,HLA-A03:01,HLA-A24:02,HLA-A26:01,HLA-B07:02,HLA-B08:01,HLA-B27:05,HLA-B39:01,' \
