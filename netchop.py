@@ -6,8 +6,8 @@ def feed_to_Netchop(input_file_path, output_file_path, path_to_tool):
     subprocess.check_output('%s' % command, shell=True)
 
 
-def create_dataframe(file, df, seq):
-    directory="/home/itaybroder/Documents/GitHub/CovidResearch/CovSpikeMCHProject/output_files"
+def create_dataframe(file, df, seq, dir):
+    directory=dir
     for txt in os.listdir(directory):
         if txt.endswith(".txt"):
             with  open(directory+"/"+txt, "r+") as file:
