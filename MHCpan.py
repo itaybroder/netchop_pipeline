@@ -18,7 +18,7 @@ def split_for_all_peptides(str):
 
 
 def feed_to_NetMHCPan(input_file_path, output_file_path, pep_length):
-    path_to_tool = '/home/itaybroder/Desktop/netMHCpan-4.1'
+    path_to_tool = '/home/itaybroder/Downloads/netMHCpan-4.1'
     if os.path.exists(path_to_tool) and os.path.exists(output_file_path) and os.path.exists(input_file_path):
         print('found all paths  :) ')
     else:
@@ -31,7 +31,7 @@ def feed_to_NetMHCPan(input_file_path, output_file_path, pep_length):
     print(command)
     subprocess.check_output('%s' % command, shell=True)
 
-input_folder = "/home/itaybroder/Desktop/CovidResearch/CovSpikeMCHProject/input_files"
-output_folder = "/home/itaybroder/Desktop/CovidResearch/CovSpikeMCHProject/output_files"
+input_folder = "/home/itaybroder/Desktop/netchop_pipeline/input_files"
+output_folder = "/home/itaybroder/Desktop/netchop_pipeline/output_files"
 pep_length = [8, 9, 10]
 feed_to_NetMHCPan(input_folder + '/all_peps.txt', output_folder + '/out.txt', pep_length)
