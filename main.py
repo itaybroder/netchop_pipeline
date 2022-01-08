@@ -28,14 +28,11 @@ input_file.close()
 
 
 def cystine(pep):
-    # for i in range(1, len(pep)-2):
-    #     if(pep[i] == "C"):
-    #         return True
+    for i in range(1, len(pep)-2):
+        if(pep[i] == 'C'):
+            return True
             
-    # print(False)
-    # return False
-    print(pep)
-    return True
+    return False
 
 def netchop_mutation_pipeline(mutation_dict):  
     #creating all peptides from RNA
