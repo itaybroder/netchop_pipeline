@@ -55,7 +55,9 @@ def netchop_mutation_pipeline(mutation_dict):
     df2 = create_dataframe(output_file, df2, 'seq2', OUTPUT_DIR)
     
     result = df1
-    df1["cysteine"] = np.where(cystine(df1["peptide"]), True, False)
+    #adding cys
+    df1['cysteine'] = df1['peptide'].apply(lambda x: 'True' if 'c' in x[1: len(x) -2] else 'False')
+
 
     # result = df1.merge(df2, how='left', left_on=['start_pos', 'end_pos'], right_on=['start_pos','end_pos'], suffixes=['_before_mutation', '_after_mutation'])
     return result
