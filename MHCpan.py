@@ -19,10 +19,20 @@ def split_for_all_peptides(str):
 
 def feed_to_NetMHCPan(input_file_path, output_file_path, pep_length):
     path_to_tool = '/home/itaybroder/Downloads/netMHCpan-4.1'
-    if os.path.exists(path_to_tool) and os.path.exists(output_file_path) and os.path.exists(input_file_path):
+    if os.path.exists(path_to_tool):
         print('found all paths  :) ')
     else:
-        print('cant find a path  :( ')
+        print("coudn't find ", " ", os.path.exists(path_to_tool))
+
+    if os.path.exists(output_file_path):
+        print('found all paths  :) ')
+    else:
+        print("coudn't find ", " ", os.path.exists(output_file_path))
+    if os.path.exists(input_file_path):
+         print('found all paths  :) ')
+    else:
+        print("coudn't find ", " ", os.path.exists(input_file_path))
+
 
     HLA_str = 'HLA-A01:01,HLA-A02:01,HLA-A03:01,HLA-A24:02,HLA-A26:01,HLA-B07:02,HLA-B08:01,HLA-B27:05,HLA-B39:01,' \
               'HLA-B40:01,HLA-B58:01,HLA-B15:01'
