@@ -56,7 +56,7 @@ def netchop_mutation_pipeline(mutation_dict):
     
     result = df1
     #adding cys
-    df1['cysteine'] = df1['peptide'].apply(lambda x: 'True' if 'c' in x[1: len(x) -2] else 'False')
+    df1['cysteine'] = df1['peptide'].apply(lambda x: 'True' if 'C' in x[1: len(x) -2] else 'False')
 
 
     # result = df1.merge(df2, how='left', left_on=['start_pos', 'end_pos'], right_on=['start_pos','end_pos'], suffixes=['_before_mutation', '_after_mutation'])
