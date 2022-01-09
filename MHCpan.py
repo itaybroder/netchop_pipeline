@@ -60,8 +60,11 @@ def create_mhcpan_dataframe(output_file):
     with open(output_file, 'r'):
         lis=[]
         i = 0
+        print("MHC output file: " + output_file[:50])
         while(i<len(output_file)):
+            
             while(i<len(output_file)):
+                print("line line i  "+ output_file[i])
                 if(output_file[i].startswith(" Pos")):
                     i+=2
                     break
