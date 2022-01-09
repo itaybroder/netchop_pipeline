@@ -73,6 +73,7 @@ def create_mhcpan_dataframe(output_file):
                 rank = line[12]
                 BindLevel = line[14]
                 row = [mhc_type, peptide, rank, BindLevel]
+                print(row)
                 lis.append(row)
                 i+=1
         
