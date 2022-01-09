@@ -4,7 +4,7 @@ import os
 
 
 from netchop import create_dataframe, feed_to_Netchop
-from MHCpan import split_for_all_peptides
+from MHCpan import create_mhcpan_dataframe, split_for_all_peptides
 from config import HOME_DIRECTORY, INPUT_DIR, OUTPUT_DIR, PATH_TO_NETCHOP
 
 
@@ -59,7 +59,10 @@ def netchop_mutation_pipeline(mutation_dict):
     #adding cys
     df1['cysteine'] = df1['peptide'].apply(lambda x: 'True' if 'C' in x[1: len(x) -2] else 'False')
 
-
+    #add netMHCpan
+    output_file = OUTPUT_DIR + "/netMHCpan.txt"
+    mhcpan_df = create_mhcpan_dataframe(output_file)
+    
     # result = df1.merge(df2, how='left', left_on=['start_pos', 'end_pos'], right_on=['start_pos','end_pos'], suffixes=['_before_mutation', '_after_mutation'])
     return result
     

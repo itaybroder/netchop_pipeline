@@ -1,7 +1,7 @@
 import subprocess
 import os
-
-
+import pd
+from config import HOME_DIRECTORY, INPUT_DIR, OUTPUT_DIR, PATH_TO_NETCHOP
 
 #splitting RNA to all the possible peptides by certain k
 def split_by_k(RNA, k):
@@ -54,3 +54,28 @@ textfile.close()
 
 
 feed_to_NetMHCPan(input_folder + '/all_peps.txt', output_folder + '/netMHCpan.txt', pep_length)
+
+
+def create_mhcpan_dataframe(output_file):
+    with open(output_file, 'r'):
+        lis=[]
+        i = 0
+        while(i<len(output_file)):
+            while(i<len(output_file)):
+                if(output_file[i].startswith(" Pos")):
+                    i+=2
+                    break
+                i+=1
+            while(i<len(output_file) and output_file[i].startswith("-")):
+                line = output_file[i].split()
+                mhc_type = line[1]
+                peptide = line[2]
+                rank = line[12]
+                BindLevel = line[14]
+                row = [mhc_type, peptide, rank, BindLevel]
+                lis.append(row)
+                i+=1
+        
+        cols = ["mhc_type", "peptide", "rank", "BindLevel"]
+        mhc_frame = pd.DataFrame(lis, columns=cols)
+        mhc_frame.to_csv(OUTPUT_DIR + "/mhc_resualt.csv")
