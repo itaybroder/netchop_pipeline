@@ -10,7 +10,7 @@ def feed_to_Netchop(input_file_path, output_file_path, path_to_tool):
 def create_dataframe(file, df, seq, dir):
     directory=dir
     for txt in os.listdir(directory):
-        if txt.endswith(".txt"):
+        if txt.endswith("out.txt"):
             with  open(directory+"/"+txt, "r+") as file:
                 lis=[]
                 for line in file:
