@@ -73,12 +73,11 @@ def create_mhcpan_dataframe(output_file):
                 mhc_type = line[1]
                 peptide = line[2]
                 rank = line[12]
-                BindLevel = line[14]
-                row = [mhc_type, peptide, rank, BindLevel]
+                row = [mhc_type, peptide, rank]
                 print(row)
                 lis.append(row)
                 i+=1
         
-        cols = ["mhc_type", "peptide", "rank", "BindLevel"]
+        cols = ["mhc_type", "peptide", "rank"]
         mhc_frame = pd.DataFrame(lis, columns=cols)
         mhc_frame.to_csv(OUTPUT_DIR + "/mhc_resualt.csv")
