@@ -64,12 +64,11 @@ def create_mhcpan_dataframe(output_file):
         while(i<len(output_file_lines)):
             
             while(i<len(output_file_lines)):
-                print("line line i  "+ output_file_lines[i])
                 if(output_file_lines[i].startswith(" Pos")):
                     i+=2
                     break
                 i+=1
-            while(i<len(output_file_lines) and output_file_lines[i].startswith("-")):
+            while(i<len(output_file_lines) and (not output_file_lines[i].startswith("-"))):
                 line = output_file_lines[i].split()
                 mhc_type = line[1]
                 peptide = line[2]
