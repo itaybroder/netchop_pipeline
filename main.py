@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 
+
 from netchop import create_dataframe, feed_to_Netchop
 from MHCpan import split_for_all_peptides
 from config import HOME_DIRECTORY, INPUT_DIR, OUTPUT_DIR, PATH_TO_NETCHOP
