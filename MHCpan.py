@@ -57,20 +57,21 @@ feed_to_NetMHCPan(input_folder + '/all_peps.txt', output_folder + '/netMHCpan.tx
 
 
 def create_mhcpan_dataframe(output_file):
-    with open(output_file, 'r'):
+    with open(output_file, 'r') as f:
+        output_file_lines = f.readlines()
         lis=[]
         i = 0
-        print("MHC output file: " + output_file[:50])
-        while(i<len(output_file)):
+        print("MHC output file: " + output_file_lines[:50])
+        while(i<len(output_file_lines)):
             
-            while(i<len(output_file)):
-                print("line line i  "+ output_file[i])
-                if(output_file[i].startswith(" Pos")):
+            while(i<len(output_file_lines)):
+                print("line line i  "+ output_file_lines[i])
+                if(output_file_lines[i].startswith(" Pos")):
                     i+=2
                     break
                 i+=1
-            while(i<len(output_file) and output_file[i].startswith("-")):
-                line = output_file[i].split()
+            while(i<len(output_file_lines) and output_file_lines[i].startswith("-")):
+                line = output_file_lines[i].split()
                 mhc_type = line[1]
                 peptide = line[2]
                 rank = line[12]
