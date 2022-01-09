@@ -61,7 +61,6 @@ def create_mhcpan_dataframe(output_file):
         output_file_lines = f.readlines()
         lis=[]
         i = 0
-        print("MHC output file: " + output_file_lines[:50])
         while(i<len(output_file_lines)):
             
             while(i<len(output_file_lines)):
