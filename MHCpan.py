@@ -1,6 +1,6 @@
 import subprocess
 import os
-import pd
+import pandas as pd
 from config import HOME_DIRECTORY, INPUT_DIR, OUTPUT_DIR, PATH_TO_NETCHOP
 
 #splitting RNA to all the possible peptides by certain k
